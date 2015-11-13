@@ -43,7 +43,7 @@ def _get_st2_rules_url(base_url):
         return base_url + '/rules'
 
 
-def _create_distro_rule_meta(distro, branch, dl_server, distro_release=None):
+def _create_distro_rule_meta(distro, branch, dl_server, pkg_action_ref, distro_release=None):
     rule_meta = {
         'name': 'st2_pkg_prod_%s_%s' % (branch, distro.lower()),
         'pack': 'st2cd',
@@ -75,7 +75,7 @@ def _create_distro_rule_meta(distro, branch, dl_server, distro_release=None):
             }
         },
         'action': {
-            'ref': 'st2cd.st2_pkg_%s' % distro.lower(),
+            'ref': pkg_action_ref,
             'parameters': {
                 'repo': '{{trigger.parameters.repo}}',
                 'branch': branch,
@@ -114,7 +114,8 @@ def main(args):
     # ubuntu14 rule
     try:
         rule_meta = _create_distro_rule_meta(distro='ubuntu14', branch=args.branch,
-                                             dl_server='{{system.apt_origin_production}}')
+                                             dl_server='{{system.apt_origin_production}}',
+                                             pkg_action_ref='st2cd.st2_pkg_ubuntu14')
         create_rule(_get_st2_rules_url(args.st2_base_url), rule_meta)
         sys.stdout.write('Successfully created rule %s\n' % rule_meta['name'])
     except Exception as e:
@@ -125,6 +126,7 @@ def main(args):
     try:
         rule_meta = _create_distro_rule_meta(distro='rhel7', branch=args.branch,
                                              dl_server='{{system.yum_origin_production}}',
+                                             pkg_action_ref='st2cd.st2_pkg_el',
                                              distro_release='7')
         create_rule(_get_st2_rules_url(args.st2_base_url), rule_meta)
         sys.stdout.write('Successfully created rule %s\n' % rule_meta['name'])
@@ -136,6 +138,7 @@ def main(args):
     try:
         rule_meta = _create_distro_rule_meta(distro='rhel6', branch=args.branch,
                                              dl_server='{{system.yum_origin_production}}',
+                                             pkg_action_ref='st2cd.st2_pkg_el',
                                              distro_release='6')
         create_rule(_get_st2_rules_url(args.st2_base_url), rule_meta)
         sys.stdout.write('Successfully created rule %s\n' % rule_meta['name'])
