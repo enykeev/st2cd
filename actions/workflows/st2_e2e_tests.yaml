@@ -6,8 +6,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         hosts: "{{hostname}}"
         st2_username: "{{st2_username}}"
         st2_password: "{{st2_password}}"
@@ -58,8 +58,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "core_local_date"
         token: "{{st2_token}}"
         action: "core.local"
@@ -72,8 +72,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "core_http_google"
         token: "{{st2_token}}"
         action: "core.http"
@@ -86,8 +86,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "core_remote_single_host"
         token: "{{st2_token}}"
         action: "core.remote"
@@ -100,8 +100,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart"
         token: "{{st2_token}}"
         action: "tests.test_quickstart"
@@ -115,8 +115,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_key"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_key"
@@ -129,8 +129,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_rules"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_rules"
@@ -144,8 +144,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_packs_pack"
         token: "{{st2_token}}"
         action: "tests.test_packs_pack"
@@ -159,8 +159,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_local_script"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_local_script_actions"
@@ -174,8 +174,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_remote_script"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_remote_script_actions"
@@ -189,8 +189,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_passive_sensor"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_passive_sensor"
@@ -204,8 +204,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_polling_sensor"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_polling_sensor"
@@ -219,8 +219,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_quickstart_python"
         token: "{{st2_token}}"
         action: "tests.test_quickstart_python_actions"
@@ -234,8 +234,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_mistral_examples"
         token: "{{st2_token}}"
         params: ""
@@ -250,8 +250,8 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_timer_rule"
         token: "{{st2_token}}"
         action: "tests.test_timer_rule"
@@ -266,35 +266,13 @@
       params:
         env:
           ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
+          ST2_AUTH_URL: "{{protocol}}://{{hostname_api}}:9100"
+          ST2_API_URL: "{{protocol}}://{{hostname_auth}}:9101"
         name: "test_windows_runners"
         token: "{{st2_token}}"
         action: "tests.test_windows_runners"
         params: "token={{st2_token}} protocol={{protocol}} windows_host={{windows_host}} windows_username={{windows_username}} windows_password={{windows_password}}"
         hosts: "{{hostname}}"
         timeout: 600
-      on-success: "selenium"
-      on-failure: "selenium"
-    -
-      name: "selenium"
-      ref: "st2cd.action_run"
-      params:
-        env:
-          ST2_BASE_URL: "{{protocol}}://{{hostname}}"
-          ST2_AUTH_URL: "{{protocol}}://{{hostname}}:9100"
-          ST2_API_URL: "{{protocol}}://{{hostname}}:9101"
-        name: "webui_selenium"
-        token: "{{st2_token}}"
-        action: "webui.selenium"
-        params: "token={{st2_token}} protocol={{protocol}} branch=master repo=https://github.com/StackStorm/st2e2e.git web_host={{hostname}}"
-        hosts: "{{hostname}}"
-        timeout: 600
-      on-failure: "ignore_selenium_failure"
-    -
-      name: "ignore_selenium_failure"
-      ref: "core.local"
-      params:
-        cmd: "echo 'Selenium tests failed, but all other tests were successful. Setting overall status to success'"
 
   default: "get_st2_token"

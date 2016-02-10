@@ -9,25 +9,18 @@
       type: "string"
       description: "Host to run tests on"
       required: true
-    repo:
+    hostname_api:
       type: "string"
-      description: ""
-    branch:
+      description: "API host"
+      required: true
+    hostname_auth:
       type: "string"
-      description: ""
+      description: "Auth host"
+      required: true
     st2tests_branch:
       type: "string"
       description: ""
       default: "master"
-    build:
-      type: "string"
-      description: "Build number"
-      required: true
-    environment:
-      type: "string"
-      description: ""
-    revision:
-      type: "string"
     st2_username:
       type: "string"
       description: "Username to authenticate to the St2 server"
